@@ -1,4 +1,3 @@
-require "base64"
 require "jwt"
 
 ISSUER_ID = "<issuer ID>"
