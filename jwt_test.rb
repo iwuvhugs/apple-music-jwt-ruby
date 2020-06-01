@@ -1,4 +1,3 @@
-require "base64"
 require "jwt"
 
 ISSUER_ID = "CapExdTeam"
@@ -17,6 +16,7 @@ header = {
 
 key_file = File.read("test_private_key.p8")
 private_key = OpenSSL::PKey::EC.new key_file 
+# private_key = OpenSSL::PKey.read(File.read("test_private_key.p8"))
 # private_key.check_key
 
 public_key = OpenSSL::PKey::EC.new private_key
